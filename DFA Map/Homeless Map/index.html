@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Homeless Resources in Houston</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta property="og:title" content="Find and Map Maker Resources"/>
+        <meta property="og:image" content="http://themakermap.com/img/facebook_metaImage.png"/>
+        <meta property="og:site_name" content="Resources for Those Experiencing Homelessness"/>
+        <meta property="og:description" content="This map is an ongoing project which aims to create a database of resources for those experiencing homelessness in Houston"/>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/screen.css">                     
+        <link rel="stylesheet" href="./css/phone.css" media="only screen and (max-device-width: 480px)">
+        <link rel="stylesheet" href="./css/tablet.css" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="controlWrap">
+            <div class="header">
+                <span class="brand">Resources for Those Experiencing Homelessness</span>
+                <div class="menuToggle"><i class="icon-reorder"></i></div>
+            </div><!-- .header -->
+
+            <div class="searchWrap">
+                <form id="search">
+                    <input id="searchForm" type="text" placeholder="Search..." />
+                </form>
+                <div class="searchIcon"><i class="icon-search"></i></div>
+                <div class="filterIcon"><i class="icon-tags"></i></div>
+            </div><!-- .searchWrap -->
+
+            <div class="filterWrap">
+                <div class="filterHeader">Filter By Resource Type <i class="icon-caret-up"></i></div>
+                <form id="filter">
+                    <ul class="filters">
+                        <li><label class="any-filter">Any<input type="checkbox" checked="checked" value="any"></label></li>
+                        <li><label>Soup Kitchens<input type="checkbox" checked="checked" value="retail"></label></li>
+                        <li><label>Free Clinics<input type="checkbox" checked="checked" value="workspace"></label></li>
+                        <li><label>Shelter<input type="checkbox" checked="checked" value="fabricator"></label></li>
+                        <li><label>Mental Health Resources<input type="checkbox" checked="checked" value="distributor"></label></li>
+                        <li><label>Resources for Women<input type="checkbox" checked="checked" value="museum"></label></li>
+                        <li><label>Medical Assistance<input type="checkbox" checked="checked" value="service"></label></li>
+                    </ul>
+                </form>
+            </div><!-- .filterWrap -->
+
+            <div class="footerWrap">
+                <div class="footer">
+                    <div class="mapActions">
+                        <a href="https://docs.google.com/spreadsheet/viewform?formkey=dFFZc2hBY1h3M3hPM1B2bVphZmhsY0E6MA#gid=0" class="action addResource" title="Add a Resource"  target="_blank"><i class="icon-plus"></i><br/>Add a Resource</a>
+                    </div>
+                </div>
+            </div><!-- .footerWrap -->
+        </div><!-- #controlWrap -->
+
+        <div class="locateMe" rel="tooltip" data-placement="left" data-original-title="click to re-center the map"><i class="icon-map-marker"></i></div>
+        
+        <!-- Map -->
+        <div id="map-wrapper">
+            <div id="map-canvas"></div>
+        </div>
+
+        <!-- Modal -->
+        <div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog" >
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <div class="modal-body"></div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.js"></script>
+        <script src="./js/jquery.hovertips.js"></script>
+        <script src="./js/index.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-40237802-1', 'themakermap.com');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
